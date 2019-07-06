@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Penjualan</string>
+    <string name="app_barappbar_scrolling_view_behavior">appbar_scrolling_view_behavior</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_products">Products</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
