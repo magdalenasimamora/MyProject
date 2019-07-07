@@ -27,7 +27,6 @@ public class ProductActivity extends AppCompatActivity {
     private Activity mActivity;
 
     private LinearLayout mRootLayout;
-    private Button mBtnDoTask;
 
     RecyclerView rvMain;
 
@@ -44,15 +43,7 @@ public class ProductActivity extends AppCompatActivity {
         mContext = getApplicationContext();
         mActivity = ProductActivity.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mBtnDoTask = findViewById(R.id.btn_do_task);
-
-        mBtnDoTask.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                openDialer();
-            }
-        });
+        mRootLayout = (LinearLayout) findViewById(R.id.root_layout);
     }
     protected void openDialer(){
         Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -103,11 +94,19 @@ public class ProductActivity extends AppCompatActivity {
 
         ImageView imageView;
         TextView textView;
+        Button mBtnDoTask;
         public GridHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.ivMainImage);
             textView = itemView.findViewById(R.id.tvCaption);
-        }
+            mBtnDoTask = itemView.findViewById(R.id.btn_do_task);
 
+            mBtnDoTask.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openDialer();
+                }
+            });
+        }
     }
 }
